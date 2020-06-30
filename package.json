@@ -6,6 +6,10 @@
   "repository": "git@github.com:vishalnagda1/dzi-backend.git",
   "author": "Vishal Nagda <vishalnagda1@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "export NODE_ENV=development; nodemon server.js",
+    "start-prod": "export NODE_ENV=production; node server.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
