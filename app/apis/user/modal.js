@@ -14,6 +14,10 @@ const modelSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    mobile: {
+      type: Number,
+      required: true,
+    },
     salt: String,
   },
   {
