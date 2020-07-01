@@ -18,11 +18,10 @@ const modelSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    salt: String,
   },
   {
     timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" },
   }
 );
 
-export default mongoose.model("User", modelSchema);
+module.exports = mongoose.model("User", modelSchema);
