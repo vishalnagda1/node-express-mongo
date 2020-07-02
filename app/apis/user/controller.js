@@ -76,4 +76,12 @@ async function signin(request, response) {
   }
 }
 
-module.exports = { signin, signup };
+async function signout(request, response) {
+  response.cookie("x-access-token", "deleted", {
+    expires: new Date(Date.now()),
+  });
+  response.clearCookie();
+  return response.json({ message: "signout success" });
+}
+
+module.exports = { signin, signup, signout };
