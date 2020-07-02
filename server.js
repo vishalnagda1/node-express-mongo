@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 const routes = require("./routes");
 
@@ -19,6 +20,9 @@ const app = express();
 
 // parse body params and attache them to req.body
 app.use(bodyParser.json());
+
+// parse cookie
+app.use(cookieParser());
 
 // mounting app routes
 app.use(routes);
