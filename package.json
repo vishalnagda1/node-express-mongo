@@ -1,9 +1,9 @@
 {
-  "name": "dzi-backend",
+  "name": "node-express-mongo",
   "version": "1.0.0",
-  "description": "DZI backend",
+  "description": "Node Express Mongo",
   "main": "server.js",
-  "repository": "git@github.com:vishalnagda1/dzi-backend.git",
+  "repository": "git@github.com:vishalnagda1/node-express-mongo.git",
   "author": "Vishal Nagda <vishalnagda1@gmail.com>",
   "license": "MIT",
   "scripts": {
