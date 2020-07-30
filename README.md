@@ -1,13 +1,13 @@
-# DZI Backend
+# Node Express Mongo
 
-DZI Backend is a server side implementation for the europien based insurance company. DZI Backend application contains basic RESTful APIs to staisfy the requirements.
+**Node Express Mongo** is a scaffolding or template to get started with a new Node Express project with Mongo DB connectivity using mongoose package. It also provides basic user authentication APIs and also demonstrates the use of persistence DB layer.
 
 
 ## Requirements
 
 ##### **Prerequisites**
 
-You should have at least a basic understanding of fundamental programming concepts and some experience with introductory [`Javascript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript). And the knowledge of [`Mongo`](https://university.mongodb.com/), [`Express`](https://expressjs.com/) and [`Node JS`](https://nodejs.dev/)) is an advantage.
+You should have at least a basic understanding of fundamental programming concepts and some experience with introductory [`Javascript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript). And the knowledge of [`Mongo`](https://university.mongodb.com/), [`Express`](https://expressjs.com/) and [`Node JS`](https://nodejs.dev/) is an advantage.
 
 #### **Installation**
 
@@ -27,21 +27,21 @@ Lastly, make sure you have the following installed.
    - Clone with HTTPS *(required [git](https://git-scm.com/) installed in your system)*
 
      ```shell
-     git clone https://github.com/vishalnagda1/dzi-backend.git
+     git clone https://github.com/vishalnagda1/node-express-mongo.git
      ```
 
    - Clone with SSH *(required [git](https://git-scm.com/) installed in your system)*
 
      ```sh
-     git clone git@github.com:vishalnagda1/dzi-backend.git
+     git clone git@github.com:vishalnagda1/node-express-mongo.git
      ```
 
-   - [Download Zip](https://github.com/vishalnagda1/dzi-backend/archive/master.zip)
+   - [Download Zip](https://github.com/vishalnagda1/node-express-mongo/archive/master.zip)
 
 2. Navigate to project directory in the terminal or command prompt.
 
    ```shell
-   cd dzi-backend
+   cd node-express-mongo
    ```
 
 3. Install project dependencies
@@ -52,7 +52,7 @@ Lastly, make sure you have the following installed.
 
 4. Create a `keys.js` file in `config` directory
 
-   - If you are using **Windows** `Command Promtp` or `Powershell`
+   - If you are using **Windows** `Command Prompt` or `Powershell`
 
      ```powershell
      copy config/keys.sample.js config/keys.js
@@ -82,13 +82,13 @@ Lastly, make sure you have the following installed.
 
 6. Project server is running at:
 
-   - Server is running at [http://localhost:8000](http://localhost:8000)
+   - The server is running at [http://localhost:8000](http://localhost:8000)
 
 
 
 #### Contributing
 
-1. Fork it ( https://github.com/vishalnagda1/dzi-backend/fork )
+1. Fork it ( https://github.com/vishalnagda1/node-express-mongo/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
