@@ -1,6 +1,6 @@
 # Node Express Mongo
 
-**Node Express Mongo** is a scaffolding or template to get started with a new Node Express project with Mongo DB connectivity using mongoose package. It also provides basic user authentication APIs and also demonstrates the use of persistence DB layer.
+**Node Express Mongo** is a scaffolding or template to get started with a new Node Express project with Mongo DB connectivity using mongoose package. It also provides basic user authentication APIs and also demonstrates the use of persistence DB layer. The code linter and code formatter is also there for development environment.
 
 
 ## Requirements
@@ -45,6 +45,8 @@ Lastly, make sure you have the following installed.
    ```
 
 3. Install project dependencies
+   
+   **Note:** we're using [yarn](https://yarnpkg.com/getting-started/install), if you don't want to use it replace `yarn` with `npm`.
 
    ```shell
    yarn install
