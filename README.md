@@ -77,7 +77,7 @@ Lastly, make sure you have the following installed.
    - Run production server
 
      ```shell
-     yarn run start-prod
+     yarn start-prod
      ```
 
 6. Project server is running at:
