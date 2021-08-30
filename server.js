@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 const routes = require("./routes");
@@ -14,12 +13,13 @@ mongoose
   .then(() => console.info("MongoDB successfully connected"))
   .catch((err) => console.error(err));
 
-mongoose.set("debug", true);
+mongoose.set("debug", process.env.NODE_ENV === "development");
 
 const app = express();
 
 // parse body params and attache them to req.body
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // parse cookie
 app.use(cookieParser());

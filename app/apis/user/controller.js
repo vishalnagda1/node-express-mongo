@@ -2,7 +2,6 @@ const bcrypt = require("bcryptjs");
 const validator = require("./validator");
 const { errorParser, signJWT } = require("./helper");
 const { findUserByEmail, createUser } = require("./services");
-const { use } = require("./routes");
 
 // Register a new user
 async function signup(request, response) {
