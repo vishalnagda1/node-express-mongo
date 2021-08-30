@@ -1,11 +1,12 @@
 const jwt = require("jsonwebtoken");
-const keys = require("../../../config/keys");
+// eslint-disable-next-line
+const keys = require('../../../config/keys');
 
 // Parse JOI errors
 const errorParser = (error) => {
-  let errorObj = {};
-  error.details.map((error) => {
-    const { context, message } = error;
+  const errorObj = {};
+  error.details.forEach((err) => {
+    const { context, message } = err;
     errorObj[context.key] = message.replace(
       `"${context.label}"`,
       context.key.replace(/_|-/g, " ")
@@ -17,7 +18,7 @@ const errorParser = (error) => {
 const signJWT = (user) => {
   const { issuer, expiry, privateKey } = keys.jwt;
   const jwtOptions = {
-    issuer: issuer,
+    issuer,
     audience: String(user.id),
     expiresIn: expiry,
   };

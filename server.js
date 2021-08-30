@@ -5,7 +5,8 @@ const cookieParser = require("cookie-parser");
 const routes = require("./routes");
 
 // DB Config
-const mongoURI = require("./config/keys").mongoURI;
+// eslint-disable-next-line
+const { mongoURI } = require('./config/keys');
 
 // Connect to MongoDB
 mongoose

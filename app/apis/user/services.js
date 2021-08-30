@@ -2,7 +2,7 @@ const User = require("./model");
 const { findOne, create } = require("../../helper/services");
 
 async function findUserByEmail(email) {
-  return await findOne(User, { email });
+  return findOne(User, { email });
 }
 
 async function createUser(data) {
