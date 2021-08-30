@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const modelSchema = new mongoose.Schema(
   {
@@ -20,8 +20,8 @@ const modelSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" },
+    timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' },
   }
 );
 
-module.exports = mongoose.model("users", modelSchema);
+module.exports = mongoose.model('users', modelSchema);

@@ -1,8 +1,8 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cookieParser = require("cookie-parser");
+const express = require('express');
+const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 
-const routes = require("./routes");
+const routes = require('./routes');
 
 // DB Config
 // eslint-disable-next-line
@@ -11,10 +11,10 @@ const { mongoURI } = require('./config/keys');
 // Connect to MongoDB
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.info("MongoDB successfully connected"))
+  .then(() => console.info('MongoDB successfully connected'))
   .catch((err) => console.error(err));
 
-mongoose.set("debug", process.env.NODE_ENV === "development");
+mongoose.set('debug', process.env.NODE_ENV === 'development');
 
 const app = express();
 

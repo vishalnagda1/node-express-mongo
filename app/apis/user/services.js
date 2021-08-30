@@ -1,5 +1,5 @@
-const User = require("./model");
-const { findOne, create } = require("../../helper/services");
+const User = require('./model');
+const { findOne, create } = require('../../helper/services');
 
 async function findUserByEmail(email) {
   return findOne(User, { email });

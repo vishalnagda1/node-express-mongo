@@ -1,7 +1,7 @@
-const bcrypt = require("bcryptjs");
-const validator = require("./validator");
-const { errorParser, signJWT } = require("./helper");
-const { findUserByEmail, createUser } = require("./services");
+const bcrypt = require('bcryptjs');
+const validator = require('./validator');
+const { errorParser, signJWT } = require('./helper');
+const { findUserByEmail, createUser } = require('./services');
 
 // Register a new user
 async function signup(request, response) {
@@ -20,7 +20,7 @@ async function signup(request, response) {
 
     // Check if user exists
     if (await findUserByEmail(body.email)) {
-      return response.status(409).json({ email: "email already exists" });
+      return response.status(409).json({ email: 'email already exists' });
     }
 
     // Hash password before saving in database
@@ -54,16 +54,16 @@ async function signin(request, response) {
 
     // Check if user exists
     if (!user) {
-      return response.status(404).json({ email: "email not found" });
+      return response.status(404).json({ email: 'email not found' });
     }
 
     // Check password
     if (!bcrypt.compareSync(body.password, user.password)) {
-      return response.status(400).json({ email: "invalid credentials" });
+      return response.status(400).json({ email: 'invalid credentials' });
     }
 
     // sign JWT and send it in cookie
-    response.cookie("x-access-token", signJWT(user));
+    response.cookie('x-access-token', signJWT(user));
 
     return response.json({
       name: user.name,
@@ -76,11 +76,11 @@ async function signin(request, response) {
 }
 
 async function signout(request, response) {
-  response.cookie("x-access-token", "deleted", {
+  response.cookie('x-access-token', 'deleted', {
     expires: new Date(Date.now()),
   });
   response.clearCookie();
-  return response.json({ message: "signout success" });
+  return response.json({ message: 'signout success' });
 }
 
 module.exports = { signin, signup, signout };

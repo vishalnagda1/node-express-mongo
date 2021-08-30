@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 // eslint-disable-next-line
 const keys = require('../../../config/keys');
 
@@ -9,7 +9,7 @@ const errorParser = (error) => {
     const { context, message } = err;
     errorObj[context.key] = message.replace(
       `"${context.label}"`,
-      context.key.replace(/_|-/g, " ")
+      context.key.replace(/_|-/g, ' ')
     );
   });
   return errorObj;
