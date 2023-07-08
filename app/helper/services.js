@@ -1,5 +1,5 @@
-async function findOne(Model, data = {}) {
-  return Model.findOne(data);
+async function findOne(Model, data = {}, options = {}) {
+  return Model.findOne(data, options);
 }
 
 async function create(Model, data) {

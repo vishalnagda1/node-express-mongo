@@ -6,11 +6,11 @@ module.exports = {
       name: Joi.string().required(),
       email: Joi.string().email().required(),
       password: Joi.string().min(4).required(),
-      confirm_password: Joi.string()
+      confirmPassword: Joi.string()
         .required()
         .valid(Joi.ref('password'))
         .messages({ 'any.only': 'password does not match' }),
-      mobile_number: Joi.string()
+      mobileNumber: Joi.string()
         .min(8)
         .max(10)
         .regex(/^[0-9]+$/)
