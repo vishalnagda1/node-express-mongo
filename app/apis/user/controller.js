@@ -34,6 +34,17 @@ async function signup(request, response) {
   }
 }
 
+// Get user details
+async function getUser(request, response) {
+  try {
+    // fetching user details in authorization middleware
+    return response.json({ data: request.user });
+  } catch (err) {
+    console.log(err.message);
+    return response.status(422).json(err);
+  }
+}
+
 // User login
 async function signin(request, response) {
   try {
@@ -59,7 +70,7 @@ async function signin(request, response) {
 
     // Check password
     if (!bcrypt.compareSync(body.password, user.password)) {
-      return response.status(400).json({ email: 'invalid credentials' });
+      return response.status(400).json({ message: 'invalid credentials' });
     }
 
     // sign JWT and send it in cookie
@@ -83,4 +94,4 @@ async function signout(request, response) {
   return response.json({ message: 'signout success' });
 }
 
-module.exports = { signin, signup, signout };
+module.exports = { signin, signup, signout, getUser };
