@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const controller = require('./controller');
-const { authorization } = require('../../middleware');
+const { authorization, limiter, signupLimiter } = require('../../middleware');
 
-router.post('/signup', controller.signup);
+router.post('/signup', signupLimiter, controller.signup);
 router.post('/signin', controller.signin);
-router.get('/user', authorization, controller.getUser);
+router.get('/user', limiter, authorization, controller.getUser);
 router.post('/signout', controller.signout);
 
 module.exports = router;
